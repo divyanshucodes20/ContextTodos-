@@ -16,7 +16,7 @@ const deleteTodo=(id)=>{
   setTodos((prev)=>prev.filter((todo)=>todo.id!==id));//isme yeh kiya hai ki array me saari value daaldo given id wale todo ke alawa
 }
 const toggleComplete=(id)=>{
-setTodos((prev)=>prev.map((prevtodo)=>prevtodo===id?{...prevtodo,completed:!prevtodo.completed}:prevtodo))
+setTodos((prev)=>prev.map((prevtodo)=>prevtodo.id===id?{...prevtodo,completed:!prevtodo.completed}:prevtodo))
 }
 useEffect(() => {
 //values string me set hongi hume json me chaiye to json me convert kardo
